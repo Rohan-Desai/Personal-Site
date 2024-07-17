@@ -69,74 +69,94 @@ onMounted(() => {
 .landing-page {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .name-wrapper {
-  position: absolute;
-  margin-top: 100px;
-  margin-left: -150px;
+  text-align: center;
 }
 
-.rohan-text {
-  font-family: 'Major Mono Display';
-  font-size: 250px;
-  height: 250px;
-  color: white;
-}
-
+.rohan-text,
 .desai-text {
   font-family: 'Major Mono Display';
-  font-size: 250px;
-  height: 250px;
-  margin-left: 600px;
   color: white;
+  font-size: 10vw; /* Adjust font size relative to viewport width */
 }
 
 .swe-text {
-  position: relative;
   font-family: 'Major Mono Display';
   font-style: italic;
   color: white;
-
-  font-size: 30px;
-  width: 500px;
-  top: 300px;
-  left: 850px;
+  font-size: 3vw;
+  margin-top: 2vh;
 }
 
 .icons {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  position: absolute;
-  top: 80%;
-  left: 38.5%;
+  gap: 2vw;
+  margin-top: 5vh;
 }
 
 .icon {
-  font-size: 80px;
+  font-size: 5vw;
   color: white;
 }
 
 .bouncing-circle {
-  position: absolute;
-  bottom: 52.5%;
-  right: 9.5%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: 5vw;
+  height: 5vw;
   background-color: white;
   border-radius: 50%;
+  margin-top: 5vh;
 }
-.svg-container {
-  top: 50%;
-  position: absolute;
-  z-index: auto;
-  left: 20%;
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .rohan-text,
+  .desai-text {
+    font-size: 15vw;
+  }
+
+  .swe-text {
+    font-size: 5vw;
+  }
+
+  .icon {
+    font-size: 8vw;
+  }
+
+  .bouncing-circle {
+    width: 8vw;
+    height: 8vw;
+  }
 }
-.flip-n {
-  display: inline-block;
-  transform-origin: center;
+
+/* Media queries for very small screens */
+@media (max-width: 480px) {
+  .rohan-text,
+  .desai-text {
+    font-size: 20vw;
+  }
+
+  .swe-text {
+    font-size: 6vw;
+  }
+
+  .icon {
+    font-size: 10vw;
+  }
+
+  .bouncing-circle {
+    width: 10vw;
+    height: 10vw;
+  }
 }
+
+.flip-n,
 .flip-s {
   display: inline-block;
   transform-origin: center;
