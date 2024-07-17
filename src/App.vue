@@ -1,23 +1,20 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import LandingPage from './components/LandingPage.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <LandingPage />
   </main>
 </template>
 
 <style scoped>
+.major-mono-display-regular {
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 header {
   line-height: 1.5;
 }
