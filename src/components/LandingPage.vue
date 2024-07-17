@@ -14,7 +14,7 @@ onMounted(() => {
   gsap.from('.bouncing-circle', { duration: 1, opacity: 0, scale: 0, delay: 3 })
 
   gsap.to('.bouncing-circle', {
-    y: -80,
+    y: -50,
     duration: 0.5,
     yoyo: true,
     repeat: -1,
@@ -51,11 +51,11 @@ onMounted(() => {
       <div class="desai-text">
         <p>De<span class="flip-s">s</span>ai</p>
       </div>
+      <div class="bouncing-circle"></div>
     </div>
     <div class="swe-text">
       <p>&lt;Software Engineer&gt;</p>
     </div>
-    <div class="bouncing-circle"></div>
     <div class="icons">
       <i class="fab fa-github icon"></i>
       <i class="fab fa-linkedin icon"></i>
@@ -76,83 +76,170 @@ onMounted(() => {
 }
 
 .name-wrapper {
-  text-align: center;
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  padding-bottom: 100px;
 }
 
 .rohan-text,
 .desai-text {
   font-family: 'Major Mono Display';
   color: white;
-  font-size: 10vw; /* Adjust font size relative to viewport width */
+  font-size: 180px; /* Adjust font size relative to viewport width */
+}
+
+.rohan-text {
+  position: relative;
+  bottom: 100px;
+  left: 100px;
+}
+.desai-text {
+  position: relative;
+  top: 100px;
+  right: 100px;
 }
 
 .swe-text {
   font-family: 'Major Mono Display';
   font-style: italic;
   color: white;
-  font-size: 3vw;
-  margin-top: 2vh;
+  font-size: 25px;
+  position: relative;
+  bottom: 400px;
+  left: 350px;
 }
 
 .icons {
   display: flex;
   flex-direction: row;
-  gap: 2vw;
-  margin-top: 5vh;
+  gap: 25px;
+  position: relative;
+  top: 75px;
 }
 
 .icon {
-  font-size: 5vw;
+  font-size: 80px;
   color: white;
 }
 
 .bouncing-circle {
-  width: 5vw;
-  height: 5vw;
+  width: 15px;
+  height: 15px;
   background-color: white;
   border-radius: 50%;
-  margin-top: 5vh;
+  position: relative;
+  top: 175px;
+  right: 175px;
 }
-
 /* Media queries for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1350px) {
   .rohan-text,
   .desai-text {
-    font-size: 15vw;
+    font-size: 125px; /* Adjust font size relative to viewport width */
+  }
+
+  .rohan-text {
+    bottom: 75px;
+    left: 100px;
+  }
+  .desai-text {
+    top: 75px;
+    right: 100px;
   }
 
   .swe-text {
-    font-size: 5vw;
+    font-size: 15px;
+    bottom: 310px;
+    left: 240px;
+  }
+
+  .icons {
+    top: 100px;
   }
 
   .icon {
-    font-size: 8vw;
+    font-size: 60px;
   }
 
   .bouncing-circle {
-    width: 8vw;
-    height: 8vw;
+    top: 120px;
+    right: 155px;
+  }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 940px) {
+  .rohan-text,
+  .desai-text {
+    font-size: 75px; /* Adjust font size relative to viewport width */
+  }
+
+  .rohan-text {
+    bottom: 50px;
+    left: 50px;
+  }
+  .desai-text {
+    top: 50px;
+    right: 50px;
+  }
+
+  .swe-text {
+    font-size: 10px;
+    bottom: 230px;
+    left: 150px;
+  }
+
+  .icons {
+    top: 100px;
+  }
+
+  .icon {
+    font-size: 40px;
+  }
+
+  .bouncing-circle {
+    width: 10px;
+    height: 10px;
+    top: 75px;
+    right: 85px;
   }
 }
 
 /* Media queries for very small screens */
-@media (max-width: 480px) {
+@media (max-width: 570px) {
   .rohan-text,
   .desai-text {
-    font-size: 20vw;
+    font-size: 50px; /* Adjust font size relative to viewport width */
+  }
+
+  .rohan-text {
+    bottom: 40px;
+    left: 25px;
+  }
+  .desai-text {
+    top: 40px;
+    right: 25px;
   }
 
   .swe-text {
-    font-size: 6vw;
+    font-size: 8px;
+    bottom: 190px;
+    left: 100px;
+  }
+
+  .icons {
+    top: 100px;
   }
 
   .icon {
-    font-size: 10vw;
+    font-size: 30px;
   }
 
   .bouncing-circle {
-    width: 10vw;
-    height: 10vw;
+    width: 5px;
+    height: 5px;
+    top: 59px;
+    right: 47px;
   }
 }
 
