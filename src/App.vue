@@ -1,10 +1,12 @@
 <script setup>
 import LandingPage from './components/LandingPage.vue'
+import SelfDescripton from './components/SelfDescription.vue'
 </script>
 
 <template>
   <main>
     <LandingPage />
+    <SelfDescripton />
   </main>
 </template>
 

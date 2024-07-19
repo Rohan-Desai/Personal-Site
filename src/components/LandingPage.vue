@@ -57,10 +57,18 @@ onMounted(() => {
       <p>&lt;Software Engineer&gt;</p>
     </div>
     <div class="icons">
-      <i class="fab fa-github icon"></i>
-      <i class="fab fa-linkedin icon"></i>
-      <i class="fab fa-instagram icon"></i>
-      <i class="fab fa-facebook icon"></i>
+      <a href="https://github.com/Rohan-Desai" target="_blank" class="icon-link">
+        <i class="fab fa-github icon"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/rohan-desai-2a4b6b22a" target="_blank" class="icon-link">
+        <i class="fab fa-linkedin icon"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="icon-link">
+        <i class="fab fa-instagram icon"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" class="icon-link">
+        <i class="fab fa-facebook icon"></i>
+      </a>
     </div>
   </div>
 </template>
