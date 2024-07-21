@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, onBeforeUnmount } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -10,111 +10,136 @@ let ctx
 onMounted(() => {
   ctx = gsap.context(() => {
     const panels = gsap.utils.toArray('.content .panel')
-    gsap.to('.content', {
-      x: () => -window.innerWidth * (panels.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.wrapper',
-        start: 'top top',
-        end: '+=' + window.innerWidth * (panels.length - 1),
-        scrub: true,
-        invalidateOnRefresh: false,
-        pin: true
-      }
-    })
-
-    // Adding rotation animation for stars
-    gsap.utils.toArray('.star').forEach((star) => {
-      gsap.to(star, {
-        rotation: 360,
+    const animatePanels = () => {
+      gsap.to('.content', {
+        x: () => -window.innerWidth * (panels.length - 1),
         ease: 'none',
         scrollTrigger: {
           trigger: '.wrapper',
           start: 'top top',
-          end: '+=' + window.innerWidth, // Adjust this value based on the length of your scroll
-          scrub: true
+          end: '+=' + window.innerWidth * (panels.length - 1),
+          scrub: true,
+          invalidateOnRefresh: false,
+          pin: true
         }
       })
-    })
+    }
+    // Adding rotation animation for stars
+    const animateStars = () => {
+      gsap.utils.toArray('.star').forEach((star) => {
+        gsap.to(star, {
+          rotation: 360,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.wrapper',
+            start: 'top top',
+            end: '+=' + window.innerWidth, // Adjust this value based on the length of your scroll
+            scrub: true
+          }
+        })
+      })
+    }
     const arrowAnimations = [
       { selector: '.arrow.rightdown', x: 400, y: 400 },
       { selector: '.arrow.leftdown', x: -400, y: 400 },
       { selector: '.arrow.rightup', x: 400, y: -400 },
       { selector: '.arrow.leftup', x: -400, y: -400 }
     ]
-
-    arrowAnimations.forEach((arrow) => {
+    const animateArrows = (multiplier) => {
+      arrowAnimations.forEach((arrow) => {
+        gsap.fromTo(
+          arrow.selector,
+          { x: 0, y: 0 },
+          {
+            x: arrow.x,
+            y: arrow.y,
+            scrollTrigger: {
+              trigger: '.wrapper',
+              start: 'top top',
+              end: '+=' + window.innerWidth * multiplier,
+              scrub: true
+            }
+          }
+        )
+      })
+    }
+    const animateLines = (multiplier) => {
+      const lines = gsap.utils.toArray('.line svg')
       gsap.fromTo(
-        arrow.selector,
-        { x: 0, y: 0 },
+        lines,
+        { width: 0 },
         {
-          x: arrow.x,
-          y: arrow.y,
+          width: (i, target) => target.getAttribute('width'),
           scrollTrigger: {
             trigger: '.wrapper',
-            start: 'top top',
-            end: '+=' + window.innerWidth * 1.2,
+            start: 'top bottom',
+            end: '+=' + window.innerWidth * multiplier,
+            scrub: true
+          },
+          stagger: 0.2 // Adjust the stagger value as needed
+        }
+      )
+    }
+    // Adding fall down animation for the "unknown" box
+    const animateBoxFall = (yval, multiplier) => {
+      gsap.fromTo(
+        '.pinkbox',
+        { y: -600, rotation: 0 },
+        {
+          y: yval,
+          rotation: 20,
+          ease: 'power1.in',
+          scrollTrigger: {
+            trigger: '.wrapper',
+            start: 'top center',
+            end: '+=' + window.innerWidth * multiplier,
             scrub: true
           }
         }
       )
-    })
-    const lines = gsap.utils.toArray('.line svg')
-    gsap.fromTo(
-      lines,
-      { width: 0 },
-      {
-        width: (i, target) => target.getAttribute('width'),
-        scrollTrigger: {
-          trigger: '.wrapper',
-          start: 'top bottom',
-          end: '+=' + window.innerWidth * 2.5,
-          scrub: true
-        },
-        stagger: 0.2 // Adjust the stagger value as needed
-      }
-    )
-    // Adding fall down animation for the "unknown" box
-    gsap.fromTo(
-      '.pinkbox',
-      { y: -600, rotation: 0 },
-      {
-        y: 1500,
-        rotation: 20,
-        ease: 'power1.in',
-        scrollTrigger: {
-          trigger: '.wrapper',
-          start: 'top center',
-          end: '+=' + window.innerWidth * 6.7,
-          scrub: true,
-          onUpdate: (self) => {
-            if (self.progress > 0.5) {
-              gsap.to('.pinkbox', {
-                ease: 'power1.out',
-                overwrite: 'auto',
-                scrollTrigger: {
-                  trigger: '.wrapper',
-                  start: 'top center',
-                  end: '+=' + window.innerWidth * 7,
-                  scrub: true,
-                  immediateRender: false
-                }
-              })
-            }
-          }
-        }
-      }
-    )
+    }
+    // Apply animations
+    animatePanels()
+    animateStars()
+
+    // Adjust animations based on screen width
+    if (window.innerWidth > 2400) {
+      animateBoxFall(1500, 6.7)
+      animateArrows(1.2)
+      animateLines(2.5)
+    } else if (window.innerWidth > 1800) {
+      animateBoxFall(1300, 6.7)
+      animateArrows(1.2)
+      animateLines(3.2)
+    } else if (window.innerWidth > 1380) {
+      animateBoxFall(1400, 6.7)
+      animateArrows(1.2)
+      animateLines(2.8)
+    } else if (window.innerWidth > 850) {
+      animateBoxFall(1300, 6.7)
+      animateArrows(1.2)
+      animateLines(3.2)
+    } else if (window.innerWidth > 500) {
+      animateBoxFall(1300, 6.7)
+      animateArrows(1.2)
+      animateLines(3.5)
+    } else {
+      animateBoxFall(900, 6.7)
+      animateArrows(1.2)
+      animateLines(4.5)
+    }
   })
 })
 
 onUnmounted(() => {
   ctx && ctx.revert()
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
 })
+onBeforeUnmount(() => {})
 </script>
 
 <template>
-  <div class="section wrapper">
+  <div class="wrapper">
     <div class="content">
       <div id="panel1" class="panel center">
         <div class="top-stars">
@@ -760,7 +785,7 @@ h1 {
     height: 101px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 850px) and (min-width: 700px) {
   .panel {
     font-size: 2vw;
   }
