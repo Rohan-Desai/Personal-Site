@@ -1,6 +1,7 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, onMounted } from 'vue'
 import SkillButton from '/src/components/SkillButton.vue'
+import { gsap } from 'gsap'
 
 // Define props
 const props = defineProps({
@@ -23,11 +24,37 @@ const props = defineProps({
   tags: {
     type: Array,
     required: true
+  },
+  pageType: {
+    type: String,
+    required: true
   }
 })
 
 // Split the company name into an array of words
 const companyWords = props.company.split(' ')
+const rotatedTexts = ['ystem', 'ducation', 'ndergraduate', 'inkages', 'ontextual']
+
+onMounted(() => {
+  if (props.pageType === 'LC') {
+    gsap.fromTo(
+      '.rotated-text span',
+      {
+        opacity: 0,
+        y: -20
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: -0.5,
+        duration: 1,
+        ease: 'power2.out',
+        repeat: -1, // Infinite repeat
+        yoyo: true // Plays forward and then backward
+      }
+    )
+  }
+})
 </script>
 
 <template>
@@ -42,16 +69,22 @@ const companyWords = props.company.split(' ')
         <p>
           <span v-for="(word, index) in companyWords" :key="index" :class="word">{{ word }}</span>
         </p>
+        <!-- <p><span class="Clues">Clues</span></p> -->
+        <div class="rotated-text" v-if="pageType == 'LC'">
+          <span v-for="(text, index) in rotatedTexts" :key="index">{{ text }}</span>
+        </div>
       </div>
       <div class="divider"></div>
       <div class="job-content">
         <ul>
           <li v-for="item in content" :key="item">{{ item }}</li>
         </ul>
-        <div class="tags">
-          <span v-for="tag in tags" :key="tag" class="tag">
-            <SkillButton :skill="tag" />
-          </span>
+        <div class="tags-wrapper">
+          <div class="tags">
+            <span v-for="tag in tags" :key="tag" class="tag">
+              <SkillButton :skill="tag" />
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -108,8 +141,38 @@ const companyWords = props.company.split(' ')
 }
 .company-name p .Clues {
   color: #dd64fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.company-name p .Morality {
+  color: #fc334b;
+}
+.company-name p .Game {
+  color: #f57d39;
+}
+.company-name p .Twenty-Four {
+  color: #ffef63;
+}
+.company-name p .G {
+  color: #aa5df8;
 }
 
+.rotated-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-right: 40px;
+  transform: rotate(90deg);
+}
+
+.rotated-text span {
+  font-size: 1.5vw;
+  color: #dd64fb;
+  margin-bottom: 2.8vw;
+  margin-left: 14vh;
+}
 .divider {
   position: relative;
   width: 1px;
@@ -131,7 +194,6 @@ const companyWords = props.company.split(' ')
 .job-content ul li {
   margin-bottom: 20px;
 }
-
 .tags {
   margin-top: 50px;
   margin-bottom: 20px;
@@ -142,7 +204,6 @@ const companyWords = props.company.split(' ')
   margin-right: 5px;
   margin-bottom: 5px;
 }
-
 .company-word {
   margin-right: 5px;
   /* Add any additional styles for each word here */
@@ -173,6 +234,13 @@ const companyWords = props.company.split(' ')
     margin-top: 100px;
     margin-bottom: 50px;
   }
+
+  .rotated-text {
+    margin-right: 3vw;
+  }
+  .rotated-text span {
+    margin-left: 18vh;
+  }
 }
 @media (max-width: 2400px) and (min-width: 1800px) {
   .job-content {
@@ -198,6 +266,12 @@ const companyWords = props.company.split(' ')
   .tags {
     margin-top: 100px;
     margin-bottom: 50px;
+  }
+  .rotated-text {
+    margin-right: 3vw;
+  }
+  .rotated-text span {
+    margin-left: 14vh;
   }
 }
 @media (max-width: 1800px) and (min-width: 1600px) {
@@ -225,6 +299,12 @@ const companyWords = props.company.split(' ')
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .rotated-text {
+    margin-right: 3vw;
+  }
+  .rotated-text span {
+    margin-left: 12vh;
+  }
 }
 @media (max-width: 1600px) and (min-width: 1380px) {
   .job-content {
@@ -251,6 +331,12 @@ const companyWords = props.company.split(' ')
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .rotated-text {
+    margin-right: 3vw;
+  }
+  .rotated-text span {
+    margin-left: 10vh;
+  }
 }
 @media (max-width: 1380px) and (min-width: 850px) {
   .job-content {
@@ -276,6 +362,12 @@ const companyWords = props.company.split(' ')
   .tags {
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+  .rotated-text {
+    margin-right: 3vw;
+  }
+  .rotated-text span {
+    margin-left: 9vh;
   }
 }
 @media (max-width: 850px) and (min-width: 500px) {
@@ -306,6 +398,12 @@ const companyWords = props.company.split(' ')
     margin-top: 5px;
     margin-bottom: 5px;
   }
+  .rotated-text {
+    margin-right: 3vw;
+  }
+  .rotated-text span {
+    margin-left: 6vh;
+  }
 }
 @media (max-width: 500px) {
   .job-content {
@@ -335,6 +433,12 @@ const companyWords = props.company.split(' ')
   .tags {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  .rotated-text {
+    margin-right: 1vw;
+  }
+  .rotated-text span {
+    margin-left: 3vh;
   }
 }
 </style>

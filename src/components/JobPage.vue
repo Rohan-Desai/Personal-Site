@@ -29,7 +29,8 @@ const cluesExperience = {
     'Web Development',
     'Dynamic Application Security Testing',
     'Static Application Security Testing'
-  ]
+  ],
+  pageType: 'LC'
 }
 
 const moralityExperience = {
@@ -55,7 +56,8 @@ const moralityExperience = {
     'Behavioral Economics',
     'Sphinx',
     'Paypal'
-  ]
+  ],
+  pageType: 'MG'
 }
 
 const g24Experience = {
@@ -87,7 +89,8 @@ const g24Experience = {
     'Agile Methodologies',
     'API Integration',
     'Unit Testing'
-  ]
+  ],
+  pageType: 'TFG'
 }
 </script>
 
@@ -100,6 +103,7 @@ const g24Experience = {
       :content="cluesExperience.content"
       :tags="cluesExperience.tags"
       :acronym="cluesExperience.acronym"
+      :pageType="cluesExperience.pageType"
     />
     <JobPage
       :title="moralityExperience.title"
@@ -108,6 +112,7 @@ const g24Experience = {
       :content="moralityExperience.content"
       :tags="moralityExperience.tags"
       :acronym="moralityExperience.acronym"
+      :pageType="moralityExperience.pageType"
     />
     <JobPage
       :title="g24Experience.title"
@@ -116,6 +121,7 @@ const g24Experience = {
       :content="g24Experience.content"
       :tags="g24Experience.tags"
       :acronym="g24Experience.acronym"
+      :pageType="g24Experience.pageType"
     />
   </div>
 </template>
