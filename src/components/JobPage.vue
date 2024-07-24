@@ -1,9 +1,5 @@
 <script setup>
 import JobPage from '/src/components/JobGeneric.vue'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { onMounted, onBeforeUnmount } from 'vue'
-import { ref } from 'vue'
 
 const cluesExperience = {
   title: 'Full Stack Developer',
@@ -93,44 +89,6 @@ const g24Experience = {
     'Unit Testing'
   ]
 }
-
-const section1 = ref(null)
-const section2 = ref(null)
-const section3 = ref(null)
-gsap.registerPlugin(ScrollTrigger)
-
-onMounted(() => {
-  gsap.to(section1.value, { opacity: 1, duration: 0.5 })
-
-  ScrollTrigger.create({
-    trigger: '.job-container',
-    start: 'top top',
-    end: 'bottom bottom',
-    scrub: true,
-    pin: true,
-    onUpdate: (self) => {
-      const progress = self.progress
-
-      if (progress < 0.33) {
-        gsap.to(section1.value, { opacity: 1, duration: 0.5 })
-        gsap.to(section2.value, { opacity: 0, duration: 0.5 })
-        gsap.to(section3.value, { opacity: 0, duration: 0.5 })
-      } else if (progress < 0.66) {
-        gsap.to(section1.value, { opacity: 0, duration: 0.5 })
-        gsap.to(section2.value, { opacity: 1, duration: 0.5 })
-        gsap.to(section3.value, { opacity: 0, duration: 0.5 })
-      } else {
-        gsap.to(section1.value, { opacity: 0, duration: 0.5 })
-        gsap.to(section2.value, { opacity: 0, duration: 0.5 })
-        gsap.to(section3.value, { opacity: 1, duration: 0.5 })
-      }
-    }
-  })
-  ScrollTrigger.refresh()
-})
-onBeforeUnmount(() => {
-  ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-})
 </script>
 
 <template>
@@ -142,8 +100,6 @@ onBeforeUnmount(() => {
       :content="cluesExperience.content"
       :tags="cluesExperience.tags"
       :acronym="cluesExperience.acronym"
-      ref="section1"
-      class="section"
     />
     <JobPage
       :title="moralityExperience.title"
@@ -152,8 +108,6 @@ onBeforeUnmount(() => {
       :content="moralityExperience.content"
       :tags="moralityExperience.tags"
       :acronym="moralityExperience.acronym"
-      ref="section2"
-      class="section"
     />
     <JobPage
       :title="g24Experience.title"
@@ -162,25 +116,10 @@ onBeforeUnmount(() => {
       :content="g24Experience.content"
       :tags="g24Experience.tags"
       :acronym="g24Experience.acronym"
-      ref="section3"
-      class="section"
     />
   </div>
 </template>
 
 <style>
-.job-container {
-  height: 200vh; /* Example height, adjust as needed */
-  position: relative;
-}
-
-.section {
-  height: 100vh; /* Each section takes full viewport height */
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
+/* You can add additional styles here if needed */
 </style>
