@@ -1,7 +1,10 @@
 <script setup>
 import { defineProps, onMounted } from 'vue'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import SkillButton from '/src/components/SkillButton.vue'
 import { gsap } from 'gsap'
+gsap.registerPlugin(ScrollTrigger)
 
 // Define props
 const props = defineProps({
@@ -177,6 +180,7 @@ onMounted(() => {
   position: relative;
   width: 1px;
   background-color: #fff;
+  height: 90%;
   top: 0px;
 }
 
