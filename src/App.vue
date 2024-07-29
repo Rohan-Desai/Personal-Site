@@ -7,10 +7,18 @@ import JobPage from './components/JobPage.vue'
 
 <template>
   <main>
-    <LandingPage />
-    <SelfDescripton />
-    <InterestPage />
-    <JobPage />
+    <div class="landing-page">
+      <LandingPage />
+    </div>
+    <div class="self-descripton-page">
+      <SelfDescripton />
+    </div>
+    <div class="interest-page">
+      <InterestPage />
+    </div>
+    <div class="job-page">
+      <JobPage />
+    </div>
   </main>
 </template>
 
@@ -20,4 +28,16 @@ import JobPage from './components/JobPage.vue'
   font-weight: 400;
   font-style: normal;
 }
+/* .landing-page {
+  height: 100vh;
+}
+.self-descripton-page {
+  height: 400vh;
+} */
+.interest-page {
+  height: 200vh;
+}
+/* .job-page {
+  height: 100vh;
+} */
 </style>

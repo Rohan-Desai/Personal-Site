@@ -93,11 +93,35 @@ const g24Experience = {
 const section1 = ref(null)
 const section2 = ref(null)
 const section3 = ref(null)
+const isSection1Trans = ref(true)
+const isSection2Trans = ref(false)
+const isSection3Trans = ref(false)
+
+const slideBg = ref(null)
+
+const animateSlide = (targetSection) => {
+  gsap
+    .timeline()
+    .to(slideBg.value, { xPercent: 0, duration: 0.5, ease: 'power2.inOut', borderRadius: 0 })
+    .set(
+      [section1.value, section2.value, section3.value].filter((el) => el !== targetSection),
+      { autoAlpha: 0 }
+    )
+    .set(targetSection, { autoAlpha: 1 }, '<')
+    .to(slideBg.value, {
+      xPercent: -100,
+      duration: 0.5,
+      delay: 0.5,
+      ease: 'power2.inOut',
+      borderRadius: '50%'
+    })
+}
 
 onMounted(() => {
-  gsap.set(section1.value, { autoAlpha: 0 })
+  gsap.set(section1.value, { autoAlpha: 1 })
   gsap.set(section2.value, { autoAlpha: 0 })
   gsap.set(section3.value, { autoAlpha: 0 })
+  gsap.set(slideBg.value, { xPercent: -100 })
 
   ScrollTrigger.create({
     trigger: '.job-container',
@@ -107,24 +131,28 @@ onMounted(() => {
     pin: true,
     id: 'myScrollTrigger2',
     onUpdate: (self) => {
-      const progress = self.progress
-      if (progress < 0.33) {
-        gsap.to(section1.value, { autoAlpha: 1 })
-        gsap.to(section2.value, { autoAlpha: 0 })
-        gsap.to(section3.value, { autoAlpha: 0 })
-      } else if (progress < 0.66) {
-        gsap.to(section1.value, { autoAlpha: 0 })
-        gsap.to(section2.value, { autoAlpha: 1 })
-        gsap.to(section3.value, { autoAlpha: 0 })
-      } else if (progress < 1) {
-        gsap.to(section1.value, { autoAlpha: 0 })
-        gsap.to(section2.value, { autoAlpha: 0 })
-        gsap.to(section3.value, { autoAlpha: 1 })
+      //On Enter
+      if (self.progress < 0.33 && !isSection1Trans.value) {
+        animateSlide(section1.value)
+        isSection1Trans.value = true
+        isSection2Trans.value = false
+        isSection3Trans.value = false
+      } else if (self.progress > 0.33 && self.progress < 0.66 && !isSection2Trans.value) {
+        animateSlide(section2.value)
+        isSection2Trans.value = true
+        isSection1Trans.value = false
+        isSection3Trans.value = false
+      } else if (self.progress > 0.66 && self.progress < 1 && !isSection3Trans.value) {
+        animateSlide(section3.value)
+        isSection3Trans.value = true
+        isSection1Trans.value = false
+        isSection2Trans.value = false
       }
     }
   })
   ScrollTrigger.refresh()
 })
+
 onBeforeUnmount(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
 })
@@ -132,6 +160,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="job-container">
+    <div class="slide-bg" ref="slideBg"></div>
     <div>
       <div class="job-page" ref="section1">
         <JobPage
@@ -174,19 +203,29 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .job-container {
-  height: 200vh;
+  height: 200vh; /* Updated to reflect the correct height */
   position: relative;
 }
-.scroll-container {
-  position: relative;
+
+.slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000; /* Change to desired monochrome background color */
+  z-index: 1;
+  border-radius: 50%;
+
+  /* display: none; */
 }
 
 .job-page {
   height: 100vh; /* Each section takes full viewport height */
   position: absolute;
   width: 100%;
+  z-index: 0;
   top: 0;
   left: 0;
-  /* opacity: 0; Set initial opacity to 0 for all sections */
 }
 </style>
