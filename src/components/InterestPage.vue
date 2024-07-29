@@ -1,12 +1,11 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onMounted, onBeforeUnmount } from 'vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const container = ref(null)
 const section1 = ref(null)
 const section2 = ref(null)
 const section3 = ref(null)
@@ -71,7 +70,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
 })
-watch(container, () => {})
 const pages = ref([
   { text: 'Page 1 content text', image: 'path/to/image1.jpg' },
   { text: 'Page 2 content text', image: 'path/to/image2.jpg' },
@@ -81,7 +79,7 @@ const pages = ref([
 </script>
 
 <template>
-  <div ref="container" class="scroll-container">
+  <div class="scroll-container">
     <div ref="section1" class="section">
       <div class="audio-content">
         <audio controls>

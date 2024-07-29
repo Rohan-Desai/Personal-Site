@@ -2,13 +2,23 @@
 import LandingPage from './components/LandingPage.vue'
 import SelfDescripton from './components/SelfDescription.vue'
 import InterestPage from './components/InterestPage.vue'
+import JobPage from './components/JobPage.vue'
 </script>
 
 <template>
   <main>
-    <LandingPage />
-    <SelfDescripton />
-    <InterestPage />
+    <div class="landing-page">
+      <LandingPage />
+    </div>
+    <div class="self-descripton-page">
+      <SelfDescripton />
+    </div>
+    <div class="interest-page">
+      <InterestPage />
+    </div>
+    <div class="job-page">
+      <JobPage />
+    </div>
   </main>
 </template>
 
@@ -18,31 +28,16 @@ import InterestPage from './components/InterestPage.vue'
   font-weight: 400;
   font-style: normal;
 }
-
-header {
-  line-height: 1.5;
+/* .landing-page {
+  height: 100vh;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.self-descripton-page {
+  height: 400vh;
+} */
+.interest-page {
+  height: 200vh;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+/* .job-page {
+  height: 100vh;
+} */
 </style>
