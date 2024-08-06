@@ -3,6 +3,7 @@ import LandingPage from './components/LandingPage.vue'
 import SelfDescripton from './components/SelfDescription.vue'
 import InterestPage from './components/InterestPage.vue'
 import JobPage from './components/JobPage.vue'
+import EducationPage from './components/EducationPage.vue'
 </script>
 
 <template>
@@ -18,6 +19,9 @@ import JobPage from './components/JobPage.vue'
     </div>
     <div class="job-page">
       <JobPage />
+    </div>
+    <div class="education-page">
+      <EducationPage />
     </div>
   </main>
 </template>
@@ -37,7 +41,7 @@ import JobPage from './components/JobPage.vue'
 .interest-page {
   height: 200vh;
 }
-/* .job-page {
-  height: 100vh;
-} */
+.job-page {
+  height: 300vh;
+}
 </style>

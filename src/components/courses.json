@@ -1,0 +1,332 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "eecs 281",
+      "name": "data structures and algorithms",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 281 is an introductory course in data structures and algorithms at the undergraduate level. the objective of the course is to present a number of fundamental techniques to solve common programming problems. for each of these problems, we will determine an abstract specification for a solution and examine one or more potential representations to implement the abstract specification, focusing on those with significant advantages in time/space required to solve large problem instances. when appropriate, we will consider special cases of a general problem that admit particularly elegant solutions.",
+      "skills": [
+        "Algorithm Design",
+        "Data Structures",
+        "Problem-Solving",
+        "Time Complexity",
+        "Space Complexity",
+        "Recursion",
+        "Sorting Algorithms",
+        "Graph Algorithms",
+        "Dynamic Programming",
+        "Hashing",
+        "Trees And Binary Trees",
+        "Heaps",
+        "Big-O Notation",
+        "Greedy Algorithms",
+        "Divide And Conquer"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "eecs 482",
+      "name": "introduction to operating systems",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 482 is an introductory course in operating systems at the undergraduate level. the objective of the course is to present fundamental concepts and techniques used in modern operating systems. topics include process management, memory management, file systems, and i/o systems. the course emphasizes the design and implementation of system software components and their interactions.",
+      "skills": [
+        "Process Management",
+        "Memory Management",
+        "File Systems",
+        "I/O Systems",
+        "Concurrency",
+        "Thread Synchronization",
+        "Deadlocks",
+        "Virtual Memory",
+        "Paging And Segmentation",
+        "System Calls",
+        "Operating System Kernels",
+        "Device Drivers",
+        "File System Implementation",
+        "Scheduling Algorithms",
+        "Linux/Unix"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "eecs 370",
+      "name": "introduction to computer architecture",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 370 is an introductory course in computer architecture at the undergraduate level. the course covers the basic principles of computer architecture and organization, including instruction set architecture, processor design, memory hierarchy, and input/output systems. the objective is to understand how computers execute programs and how various components work together to provide functionality.",
+      "skills": [
+        "Instruction Set Architecture",
+        "Processor Design",
+        "Memory Hierarchy",
+        "Input/Output Systems",
+        "Pipelining",
+        "Cache Memory",
+        "Assembly Language",
+        "Microarchitecture",
+        "Performance Optimization",
+        "Parallel Processing",
+        "Computer Organization",
+        "Arithmetic Logic Units",
+        "Control Units",
+        "Virtual Memory",
+        "Hardware-Software Interaction"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "eecs 484",
+      "name": "database management systems",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 484 is an introductory course in database management systems at the undergraduate level. the course covers the fundamental concepts of database design, implementation, and management. topics include data modeling, relational databases, sql, transaction management, and database security. the objective is to provide students with the knowledge and skills necessary to design and implement database systems.",
+      "skills": [
+        "Data Modeling",
+        "SQL",
+        "Transaction Management",
+        "Database Security",
+        "Relational Databases",
+        "Normalization",
+        "Entity-Relationship Diagrams",
+        "Indexing",
+        "Query Optimization",
+        "Stored Procedures",
+        "Database Design",
+        "Backup And Recovery",
+        "NoSQL Databases",
+        "Data Warehousing",
+        "Distributed Databases"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "eecs 203",
+      "name": "discrete mathematics",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 203 is an introductory course in discrete mathematics at the undergraduate level. the course covers fundamental topics in discrete mathematics, including logic, set theory, combinatorics, graph theory, and discrete probability. the objective is to provide students with the mathematical foundation necessary for computer science and engineering.",
+      "skills": [
+        "Logic",
+        "Set Theory",
+        "Combinatorics",
+        "Graph Theory",
+        "Discrete Probability",
+        "Number Theory",
+        "Mathematical Proofs",
+        "Algorithms",
+        "Propositional Logic",
+        "Predicate Logic",
+        "Recurrence Relations",
+        "Counting Principles",
+        "Boolean Algebra",
+        "Mathematical Induction",
+        "Cryptography"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "datasci 204",
+      "name": "introduction to data science",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "datasci 204 is an introductory course in data science at the undergraduate level. the course covers fundamental concepts and techniques in data science, including data collection, data cleaning, data visualization, and statistical analysis. the objective is to provide students with the knowledge and skills necessary to analyze and interpret data to make informed decisions.",
+      "skills": [
+        "Data Collection",
+        "Data Cleaning",
+        "Data Visualization",
+        "Statistical Analysis",
+        "Python",
+        "R",
+        "Data Mining",
+        "Machine Learning",
+        "Big Data",
+        "Predictive Modeling",
+        "Data Wrangling",
+        "Exploratory Data Analysis",
+        "Database Management",
+        "Statistical Programming",
+        "Data Ethics"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "eecs 376",
+      "name": "foundations of computer science",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 376 is an introductory course in the foundations of computer science at the undergraduate level. the course covers fundamental topics in theoretical computer science, including automata theory, formal languages, computability, and complexity theory. the objective is to provide students with a deep understanding of the theoretical underpinnings of computer science.",
+      "skills": [
+        "Automata Theory",
+        "Formal Languages",
+        "Computability",
+        "Complexity Theory",
+        "Turing Machines",
+        "Finite Automata",
+        "Context-Free Grammars",
+        "Decidability",
+        "NP-Completeness",
+        "P Vs NP Problem",
+        "Reduction Techniques",
+        "Chomsky Hierarchy",
+        "Regular Expressions",
+        "Language Recognition",
+        "Algorithmic Problem Solving",
+        "Proof Techniques",
+        "Theoretical Computer Science",
+        "Mathematical Logic"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "ling 441",
+      "name": "computational linguistics",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "ling 441 is an introductory course in computational linguistics at the undergraduate level. the course covers fundamental concepts and techniques in computational linguistics, including natural language processing, syntactic parsing, semantic analysis, and machine translation. the objective is to provide students with the knowledge and skills necessary to analyze and process natural language data.",
+      "skills": [
+        "Natural Language Processing",
+        "Syntactic Parsing",
+        "Semantic Analysis",
+        "Machine Translation",
+        "Corpus Linguistics",
+        "Statistical Methods",
+        "Python",
+        "Text Mining",
+        "Speech Recognition",
+        "Language Modeling",
+        "Computational Semantics",
+        "Information Retrieval",
+        "Linguistic Data Annotation",
+        "Named Entity Recognition",
+        "Sentiment Analysis"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "phil 340",
+      "name": "minds and machines",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "phil 340 is an introductory course in the philosophy of mind and artificial intelligence at the undergraduate level. the course covers fundamental topics in the philosophy of mind, including the nature of consciousness, the mind-body problem, and the implications of artificial intelligence for our understanding of the mind. the objective is to provide students with a philosophical framework for thinking about the nature of the mind and the potential of artificial intelligence.",
+      "skills": [
+        "Philosophy Of Mind",
+        "Consciousness",
+        "Mind-Body Problem",
+        "Artificial Intelligence Ethics",
+        "Cognitive Science",
+        "Epistemology",
+        "Metaphysics",
+        "Neuroscience",
+        "Philosophy Of Language",
+        "Moral Philosophy",
+        "Ethical Implications Of AI",
+        "Philosophy Of Science",
+        "Philosophy Of Technology",
+        "Human-Robot Interaction",
+        "AI And Society",
+        "Philosophical Arguments"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "eecs 492",
+      "name": "introduction to artificial intelligence",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 492 is an introductory course in artificial intelligence at the undergraduate level. the course covers fundamental concepts and techniques in artificial intelligence, including search algorithms, knowledge representation, machine learning, and robotics. the objective is to provide students with the knowledge and skills necessary to design and implement intelligent systems.",
+      "skills": [
+        "Search Algorithms",
+        "Knowledge Representation",
+        "Machine Learning",
+        "Robotics",
+        "Artificial Neural Networks",
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "AI Ethics",
+        "Prolog",
+        "Lisp",
+        "Python",
+        "Algorithm Design",
+        "Heuristic Methods"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "eecs 491",
+      "name": "distributed systems",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "eecs 491 is an introductory course in distributed systems at the undergraduate level. the course covers fundamental concepts and techniques in distributed systems, including communication protocols, distributed algorithms, fault tolerance, and security. the objective is to provide students with the knowledge and skills necessary to design and implement distributed systems.",
+      "skills": [
+        "Communication Protocols",
+        "Distributed Algorithms",
+        "Fault Tolerance",
+        "Security",
+        "Scalability",
+        "Concurrency Control",
+        "Data Replication",
+        "Distributed Databases",
+        "Load Balancing",
+        "Peer-To-Peer Networks",
+        "Cloud Computing",
+        "Client-Server Model",
+        "Remote Procedure Calls",
+        "Middleware",
+        "Event-Driven Architecture"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "rob 101",
+      "name": "computational linear algebra",
+      "images": {
+        "front": "",
+        "back": ""
+      },
+      "description": "rob 101 is an introductory course in computational linear algebra at the undergraduate level. the course covers fundamental topics in linear algebra, including matrix operations, vector spaces, eigenvalues, and eigenvectors. the objective is to provide students with the mathematical foundation necessary for applications in robotics, computer graphics, and machine learning.",
+      "skills": [
+        "Matrix Operations",
+        "Vector Spaces",
+        "Eigenvalues",
+        "Eigenvectors",
+        "Linear Transformations",
+        "Singular Value Decomposition",
+        "Least Squares Methods",
+        "Principal Component Analysis",
+        "MATLAB",
+        "NumPy",
+        "Python",
+        "Machine Learning",
+        "Computer Graphics",
+        "Robotics",
+        "Scientific Computing"
+      ]
+    }
+  ]
+}
