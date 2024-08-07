@@ -1,0 +1,118 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Homecare Patient Scheduling Chrome Extension and WebApp",
+      "description": "developed a chrome extension and web app to gather patient data through reverse engineering api calls from a patient portal and store data in a postgresql database. utilized twilio’s api to send texts to patients for scheduling and tracking responses.",
+      "skills": [
+        "CSS",
+        "HTML5",
+        "Chrome Extensions",
+        "Postman API",
+        "PostgreSQL",
+        "JavaScript",
+        "pgAdmin",
+        "Web Development",
+        "API Testing"
+      ],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/Patient-Scheduling/tree/master"
+      },
+      "color": "#F65555"
+    },
+    {
+      "id": 2,
+      "title": "Post Labeling",
+      "description": "used natural language processing and machine learning concepts to read posts in a discussion forum and label the posts under a subset of given labels.",
+      "skills": [
+        "Algorithms",
+        "C++",
+        "Natural Language Processing",
+        "Machine Learning",
+        "Text Classification"
+      ],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/Post-Label"
+      },
+      "color": "#F69955"
+    },
+    {
+      "id": 3,
+      "title": "PrizePicks Sports Gambling Bot",
+      "description": "scraped data off sports gambling websites to find inefficiencies in odds set by prizepicks and created valid sets of bets that are mathematically profitable over the long run, achieving a $400 profit after 2 weeks of use.",
+      "skills": [
+        "Algorithms",
+        "Python",
+        "Selenium",
+        "Web Scraping",
+        "Data Analysis",
+        "Automation",
+        "Profit Optimization"
+      ],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/PrizePicks"
+      },
+      "color": "#B955F6"
+    },
+    {
+      "id": 4,
+      "title": "SillyQL Database Query Language",
+      "description": "implemented a rudimentary database management and query language, working with hash tables and creating larger data structures through composition.",
+      "skills": ["Algorithms", "C++", "SQL", "Databases", "Data Structures", "Hash Tables"],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/SillyQL"
+      },
+      "color": "#F655DC"
+    },
+    {
+      "id": 5,
+      "title": "Image Processing Seam Carving Algorithm",
+      "description": "developed a seam carving algorithm to resize an image with minimal stretching or compressing, performing context-aware resizing by determining the row or column of the image with the least weight and adjusting accordingly.",
+      "skills": ["Algorithms", "C++", "Image Processing", "Seam Carving", "Context-Aware Resizing"],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/Image-Processing"
+      },
+      "color": "#55A9F6"
+    },
+    {
+      "id": 6,
+      "title": "Convex Hull",
+      "description": "created a closed shape using the shortest total set of connections possible for a given set of points, utilizing graham scan and jarvis march algorithm.",
+      "skills": ["Algorithms", "JavaScript", "Graham Scan", "Jarvis March", "Geometric Algorithms"],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/Convex-Hull"
+      },
+      "color": "#5855F6"
+    },
+    {
+      "id": 7,
+      "title": "UCS IASA Practice and Show Scheduler WebApp",
+      "description": "developed a web app with an intuitive signup form to allow members to sign up for dance sections, using mongodb to store and retrieve member information. implemented rest api with express and utilized the traveling salesman algorithm for optimal scheduling.",
+      "skills": [
+        "Algorithms",
+        "Express.js",
+        "RESTful Web Services",
+        "Node.js",
+        "HTML",
+        "REST APIs",
+        "JavaScript",
+        "MongoDB",
+        "CSS"
+      ],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/Iasa-Webapp"
+      },
+      "color": "#F67C55"
+    },
+    {
+      "id": 8,
+      "title": "Rock Paper Scissors Game",
+      "description": "completed a frontend mentor project involving a rock paper scissors game using vue.js. adhered to style guides for vue, css, html, and javascript, and conducted unit testing to ensure code quality.",
+      "skills": ["Vue.js", "CSS", "HTML", "JavaScript", "Unit Testing", "Frontend Development"],
+      "links": {
+        "github": "https://github.com/Rohan-Desai/Rock-Paper-Scissors"
+      },
+      "color": "#F65555"
+    }
+  ]
+}

@@ -49,7 +49,7 @@ const closeModal = () => {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
   grid-template-rows: repeat(3, 1fr); /* 3 rows */
-  gap: 50px;
+  gap: 45px;
   justify-items: center;
   align-items: center;
   margin: 0px auto;

@@ -4,6 +4,7 @@ import SelfDescripton from './components/SelfDescription.vue'
 import InterestPage from './components/InterestPage.vue'
 import JobPage from './components/JobPage.vue'
 import EducationPage from './components/EducationPage.vue'
+import ProjectPage from './components/ProjectPage.vue'
 </script>
 
 <template>
@@ -22,6 +23,9 @@ import EducationPage from './components/EducationPage.vue'
     </div>
     <div class="education-page">
       <EducationPage />
+    </div>
+    <div class="project-page">
+      <ProjectPage />
     </div>
   </main>
 </template>
