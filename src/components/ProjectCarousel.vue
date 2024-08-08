@@ -137,13 +137,85 @@ onMounted(() => {
     margin: 0 1rem;
     padding: 1rem;
   }
+  .carousel-item h3 {
+    font-size: 2rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.2rem;
+  }
+  .icon {
+    font-size: 50px;
+    color: white;
+  }
 }
-@media (max-width: 1800px) and (min-width: 1600px) {
-}
-@media (max-width: 1380px) and (min-width: 850px) {
+/* @media (max-width: 1800px) and (min-width: 1600px) {
+} */
+@media (max-width: 1100px) and (min-width: 850px) {
+  .carousel-item {
+    min-width: 250px;
+    height: 450px;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  .carousel-item h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.7rem;
+  }
+  .icon {
+    font-size: 20px;
+    color: white;
+  }
 }
 @media (max-width: 850px) and (min-width: 500px) {
+  .carousel-item {
+    min-width: 200px;
+    height: 320px;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  .carousel-item h3 {
+    font-size: 0.7rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.5rem;
+  }
+  .icon {
+    font-size: 20px;
+    color: white;
+  }
+  .skill-button {
+    padding: 5px 7px;
+    margin: 2px;
+    font-size: 0.3rem; /* Font size */
+  }
 }
 @media (max-width: 500px) {
+  .carousel-item {
+    min-width: 200px;
+    height: 320px;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  .carousel-item h3 {
+    font-size: 0.7rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.5rem;
+  }
+  .icon {
+    font-size: 20px;
+    color: white;
+  }
+  .skill-button {
+    padding: 5px 7px;
+    margin: 2px;
+    font-size: 0.3rem; /* Font size */
+  }
 }
 </style>

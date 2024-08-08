@@ -249,7 +249,7 @@ hr {
     font-size: 0.8vw; /* Font size */
   }
 }
-@media (max-width: 1380px) and (min-width: 1050px) {
+@media (max-width: 1380px) and (min-width: 1100px) {
   .container {
     gap: 20px;
   }
@@ -297,7 +297,7 @@ hr {
     font-size: 0.8vw; /* Font size */
   }
 }
-@media (max-width: 1050px) and (min-width: 900px) {
+@media (max-width: 1100px) and (min-width: 900px) {
   .container {
     gap: 15px;
   }

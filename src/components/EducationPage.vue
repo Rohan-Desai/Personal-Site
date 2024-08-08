@@ -326,17 +326,20 @@ onMounted(() => {
   }
 }
 @media (max-width: 500px) {
+  .page {
+    padding: 25px;
+  }
   .main-title,
   .main-title-course {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .title,
   .major,
   .minor {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .information {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
   }
   .icon img {
     margin-right: 2vw;

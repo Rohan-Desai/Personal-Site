@@ -8,7 +8,7 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
       <div class="title">
         <h1>Projects</h1>
       </div>
-      <div class="content">
+      <div class="project-content">
         <div class="side-description">
           <div class="header">
             <h2>Intersecting Interests</h2>
@@ -47,13 +47,16 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
   margin-bottom: 10vh;
   letter-spacing: 0.1em;
 }
-.content {
+.project-content {
   display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
 }
 .side-description {
   height: 50%;
   width: 40%;
   text-align: center;
+  justify-content: center;
 }
 .side-description .header {
   font-size: 3rem;
@@ -66,8 +69,8 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
   position: relative;
   height: 80%;
   width: 55%;
-  /* bottom: 450px;
-  left: 45%; */
+  /* /* bottom: 450px; */
+  left: 5%;
 }
 @media (min-width: 1800px) {
   .proj {
@@ -86,16 +89,66 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
     position: relative;
     height: 80%;
     width: 55%;
-    bottom: 850px;
-    left: 45%;
+    left: 5%;
   }
 }
-@media (max-width: 1800px) and (min-width: 1600px) {
+@media (max-width: 1600px) and (min-width: 1100px) {
+  .proj {
+    padding: 50px;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .side-description .header {
+    font-size: 2rem;
+  }
+  .side-description .description {
+    font-size: 1.3rem;
+  }
 }
-@media (max-width: 1380px) and (min-width: 850px) {
+@media (max-width: 1100px) and (min-width: 850px) {
+  .proj {
+    padding: 25px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 5vh;
+  }
+  .side-description .header {
+    font-size: 1.4rem;
+  }
+  .side-description .description {
+    font-size: 0.9rem;
+  }
 }
 @media (max-width: 850px) and (min-width: 500px) {
+  .proj {
+    padding: 15px;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+  }
+  .side-description .header {
+    font-size: 1rem;
+  }
+  .side-description .description {
+    font-size: 0.7rem;
+  }
 }
 @media (max-width: 500px) {
+  .proj {
+    padding: 15px;
+  }
+  .title {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+  }
+  .side-description .header {
+    font-size: 0.8rem;
+  }
+  .side-description .description {
+    font-size: 0.5rem;
+  }
 }
 </style>
