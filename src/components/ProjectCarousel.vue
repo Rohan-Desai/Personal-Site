@@ -1,8 +1,7 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
-// import { InertiaPlugin } from 'gsap/InertiaPlugin'
 import projectData from '/src/components/project.json'
 import SkillButton from '/src/components/SkillButton.vue'
 
@@ -13,13 +12,27 @@ gsap.registerPlugin(Draggable)
 
 const containerRef = ref(null)
 
-onMounted(() => {
-  projects.value = projectData.projects
+const calculateMinX = () => {
+  // const containerWidth = containerRef.value.offsetWidth
+  const viewportWidth = window.innerWidth
+  if (viewportWidth > 1100) {
+    return -2500
+  } else if (viewportWidth < 1100 && viewportWidth > 850) {
+    return -1800
+  } else if (viewportWidth < 850 && viewportWidth > 500) {
+    return -1500
+  } else if (viewportWidth < 500) {
+    return -1650
+  }
+  return 0
+}
+
+const initializeDraggable = () => {
   const container = containerRef.value
 
   Draggable.create(container, {
     type: 'x',
-    bounds: { minX: -2150, maxX: 0 },
+    bounds: { minX: calculateMinX(), maxX: 0 },
     edgeResistance: 0.8,
     inertia: true
   })
@@ -27,14 +40,24 @@ onMounted(() => {
   const scrollDuration = 30 // Duration for one complete scroll
   const tl = gsap.timeline({ repeat: -1 }) // Infinite repeat
   tl.to(container, {
-    x: `-=2150`,
+    x: calculateMinX(),
     duration: scrollDuration,
     ease: 'none'
   }).to(container, {
-    x: `+=2150`,
+    x: 0,
     duration: scrollDuration,
     ease: 'none'
   })
+}
+
+onMounted(() => {
+  projects.value = projectData.projects
+  initializeDraggable()
+  window.addEventListener('resize', initializeDraggable)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', initializeDraggable)
 })
 </script>
 

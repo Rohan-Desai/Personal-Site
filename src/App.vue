@@ -46,6 +46,6 @@ import ProjectPage from './components/ProjectPage.vue'
   height: 200vh;
 }
 .job-page {
-  height: 300vh;
+  height: 200vh;
 }
 </style>
