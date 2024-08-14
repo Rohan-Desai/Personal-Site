@@ -83,34 +83,22 @@ const pages = ref([
     <div ref="section1" class="section">
       <div class="audio-content">
         <audio controls>
-          <source
-            src="/Users/rohandesai/Desktop/Personal Site Development/Personal Site/public/almost rain - 6:11:23, 6.02 PM.m4a"
-            type="audio/mpeg"
-          />
+          <source src="/src/assets/almost rain - 6:11:23, 6.02 PM.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
 
         <audio controls>
-          <source
-            src="/Users/rohandesai/Desktop/Personal Site Development/Personal Site/public/FACGCE_1 2.m4a"
-            type="audio/mpeg"
-          />
+          <source src="/src/assets/FACGCE_1 2.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
 
         <audio controls>
-          <source
-            src="/Users/rohandesai/Desktop/Personal Site Development/Personal Site/public/Rocket Ship PROD 5_1-1.m4a"
-            type="audio/mpeg"
-          />
+          <source src="/src/assets/Rocket Ship PROD 5_1-1.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
 
         <audio controls>
-          <source
-            src="/Users/rohandesai/Desktop/Personal Site Development/Personal Site/public/Yurr.m4a"
-            type="audio/mpeg"
-          />
+          <source src="/src/assets/Yurr.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
       </div>
@@ -149,8 +137,9 @@ const pages = ref([
           src="https://www.youtube.com/embed/UF12Nmh-_W8?si=GVABVhLtqEzVjidp&t=4409"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; gyroscope;"
           allowfullscreen
+          loading="lazy"
         >
         </iframe>
       </div>
@@ -162,8 +151,9 @@ const pages = ref([
           src="https://www.youtube.com/embed/IPvJzeskL10?si=jqDWps0OkLFd1C88"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; gyroscope;"
           allowfullscreen
+          loading="lazy"
         >
         </iframe>
       </div>
@@ -201,8 +191,9 @@ const pages = ref([
           src="https://youtube.com/embed/7dx93nuWz58"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; gyroscope;"
           allowfullscreen
+          loading="lazy"
         >
         </iframe>
       </div>
