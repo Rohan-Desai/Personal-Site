@@ -65,7 +65,7 @@ onMounted(() => {
           <div class="school">
             <div class="icon">
               <img
-                src="/Users/rohandesai/Desktop/Personal Site Development/Personal Site/src/components/icons/Stevenson (1).png"
+                src="/src/components/icons/Stevenson.png"
                 alt="Stevenson High School Logo"
               />
             </div>
@@ -76,7 +76,7 @@ onMounted(() => {
           <div class="school">
             <div class="icon">
               <img
-                src="/Users/rohandesai/Desktop/Personal Site Development/Personal Site/src/components/icons/UCMST.png"
+                src="/src/components/icons/UCMST.png"
                 alt="Utica Center for Math, Science, and Technology Logo"
               />
             </div>
