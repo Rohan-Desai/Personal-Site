@@ -94,7 +94,7 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
 }
 @media (max-width: 1600px) and (min-width: 1100px) {
   .proj {
-    padding: 50px;
+    padding: 25px;
   }
   .title {
     font-size: 3rem;
@@ -129,11 +129,25 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
     font-size: 1.5rem;
     margin-bottom: 5vh;
   }
+  .side-description {
+    width: 80%;
+    margin: 0px auto 50px auto;
+  }
   .side-description .header {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .side-description .description {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+  .project-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-containers {
+    width: 90%;
+    margin: auto;
+    left: 0;
+    height: 100%;
   }
 }
 @media (max-width: 500px) {
@@ -141,14 +155,28 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
     padding: 15px;
   }
   .title {
-    font-size: 1rem;
-    margin-bottom: 3vh;
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+  }
+  .side-description {
+    width: 80%;
+    margin: 0px auto 50px auto;
   }
   .side-description .header {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   .side-description .description {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .project-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-containers {
+    width: 90%;
+    margin: auto;
+    left: 0;
+    height: 100%;
   }
 }
 </style>

@@ -250,15 +250,15 @@ onMounted(() => {
 @media (max-width: 1600px) and (min-width: 1380px) {
   .main-title,
   .main-title-course {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .title,
   .major,
   .minor {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .information {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .icon {
     margin-right: 2vw;
@@ -272,10 +272,10 @@ onMounted(() => {
   .title,
   .major,
   .minor {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .information {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .school {
     margin-top: 5vh;
@@ -303,10 +303,10 @@ onMounted(() => {
   .title,
   .major,
   .minor {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   .information {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
   }
   .icon img {
     margin-right: 1vw;
@@ -324,6 +324,12 @@ onMounted(() => {
   .information {
     width: 40vw;
   }
+  .college {
+    margin-top: 15vh;
+  }
+  .high-school {
+    margin-top: 15vh;
+  }
 }
 @media (max-width: 500px) {
   .page {
@@ -336,10 +342,10 @@ onMounted(() => {
   .title,
   .major,
   .minor {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .information {
-    font-size: 0.3rem;
+    font-size: 0.5rem;
   }
   .icon img {
     margin-right: 2vw;
@@ -353,6 +359,12 @@ onMounted(() => {
   }
   .information {
     width: 35vw;
+  }
+  .college {
+    margin-top: 15vh;
+  }
+  .high-school {
+    margin-top: 15vh;
   }
 }
 </style>
