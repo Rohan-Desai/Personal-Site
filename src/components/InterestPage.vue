@@ -83,22 +83,22 @@ const pages = ref([
     <div ref="section1" class="section">
       <div class="audio-content">
         <audio controls>
-          <source src="./src/assets/almost rain - 6:11:23, 6.02 PM.m4a" type="audio/mpeg" />
+          <source src="/src/assets/almostrain.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
 
         <audio controls>
-          <source src="./src/assets/FACGCE_1 2.m4a" type="audio/mpeg" />
+          <source src="/src/assets/FACGCE.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
 
         <audio controls>
-          <source src="./src/assets/Rocket Ship PROD 5_1-1.m4a" type="audio/mpeg" />
+          <source src="/src/assets/RocketShip.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
 
         <audio controls>
-          <source src="./src/assets/Yurr.m4a" type="audio/mpeg" />
+          <source src="/src/assets/Yurr.m4a" type="audio/mpeg" />
           Your browser does not support the audio tag.
         </audio>
       </div>
