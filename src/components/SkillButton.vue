@@ -28,6 +28,7 @@ const props = defineProps({
   font-size: 1vw; /* Font size */
   text-align: center;
   font-weight: bold;
+  border: 0px;
 }
 @media (min-width: 2400px) {
   .skill-button {

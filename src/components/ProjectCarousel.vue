@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
 
 .carousel-item {
   min-width: 350px;
-  height: 700px;
+  height: 600px;
   margin: 0 1rem;
   padding: 1rem;
   /* background-color: #f4f4f4; */
@@ -118,6 +118,7 @@ onBeforeUnmount(() => {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .carousel-item h3 {
@@ -193,19 +194,19 @@ onBeforeUnmount(() => {
     color: white;
   }
 }
-@media (max-width: 850px) and (min-width: 500px) {
+@media (max-width: 850px) and (min-width: 650px) {
   .carousel-item {
-    min-width: 200px;
-    height: 320px;
+    min-width: 250px;
+    height: 500px;
     margin: 0 1rem;
     padding: 1rem;
   }
   .carousel-item h3 {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .carousel-item p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .icon {
     font-size: 20px;
@@ -214,13 +215,13 @@ onBeforeUnmount(() => {
   .skill-button {
     padding: 5px 7px;
     margin: 2px;
-    font-size: 0.3rem; /* Font size */
+    font-size: 0.5rem; /* Font size */
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .carousel-item {
-    min-width: 200px;
-    height: 320px;
+    min-width: 250px;
+    height: 350px;
     margin: 0 1rem;
     padding: 1rem;
   }

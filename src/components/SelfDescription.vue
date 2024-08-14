@@ -39,11 +39,30 @@ onMounted(() => {
         })
       })
     }
+
+    let dx = 0
+    let dy = 0
+    if (window.innerWidth >= 1380) {
+      dx = 400
+      dy = 400
+    } else if (window.innerWidth < 1380 && window.innerWidth >= 850) {
+      dx = 300
+      dy = 300
+    } else if (window.innerWidth < 850 && window.innerWidth >= 750) {
+      dx = 200
+      dy = 200
+    } else if (window.innerWidth < 750 && window.innerWidth >= 500) {
+      dx = 150
+      dy = 150
+    } else {
+      dx = 100
+      dy = 100
+    }
     const arrowAnimations = [
-      { selector: '.arrow.rightdown', x: 400, y: 400 },
-      { selector: '.arrow.leftdown', x: -400, y: 400 },
-      { selector: '.arrow.rightup', x: 400, y: -400 },
-      { selector: '.arrow.leftup', x: -400, y: -400 }
+      { selector: '.arrow.rightdown', x: dx, y: dy },
+      { selector: '.arrow.leftdown', x: -dx, y: dy },
+      { selector: '.arrow.rightup', x: dx, y: -dy },
+      { selector: '.arrow.leftup', x: -dx, y: -dy }
     ]
     const animateArrows = (multiplier) => {
       arrowAnimations.forEach((arrow) => {
@@ -81,10 +100,23 @@ onMounted(() => {
       )
     }
     // Adding fall down animation for the "unknown" box
+
     const animateBoxFall = (yval, multiplier) => {
+      let dy = 0
+      if (window.innerWidth >= 1380) {
+        dy = 600
+      } else if (window.innerWidth < 1380 && window.innerWidth >= 850) {
+        dy = 400
+      } else if (window.innerWidth < 850 && window.innerWidth >= 750) {
+        dy = 200
+      } else if (window.innerWidth < 750 && window.innerWidth >= 500) {
+        dy = 150
+      } else {
+        dy = 100
+      }
       gsap.fromTo(
         '.pinkbox',
-        { y: -600, rotation: 0 },
+        { y: -dy, rotation: 0 },
         {
           y: yval,
           rotation: 20,
@@ -112,19 +144,19 @@ onMounted(() => {
       animateArrows(1.2)
       animateLines(3.2)
     } else if (window.innerWidth > 1380) {
-      animateBoxFall(1400, 6.7)
+      animateBoxFall(1300, 6.7)
       animateArrows(1.2)
       animateLines(2.8)
     } else if (window.innerWidth > 850) {
-      animateBoxFall(1300, 6.7)
+      animateBoxFall(1000, 6.7)
       animateArrows(1.2)
-      animateLines(3.2)
+      animateLines(3.1)
     } else if (window.innerWidth > 500) {
-      animateBoxFall(1300, 6.7)
+      animateBoxFall(500, 6.7)
       animateArrows(1.2)
       animateLines(3.5)
     } else {
-      animateBoxFall(900, 6.7)
+      animateBoxFall(100, 6.7)
       animateArrows(1.2)
       animateLines(4.5)
     }
@@ -270,13 +302,7 @@ onBeforeUnmount(() => {})
         <h1><span class="boxed orangebox">pushing</span> the status quo</h1>
         <div class="line-container">
           <div class="line firstline">
-            <svg
-              width="100"
-              height="25"
-              viewBox="0 0 390 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="100" viewBox="0 0 390 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <line y1="12.5" x2="389.021" y2="12.5" stroke="#FFAE63" stroke-width="25" />
             </svg>
           </div>
@@ -590,6 +616,26 @@ h1 {
   .line-container {
     right: 800px;
   }
+  .firstline svg {
+    width: 400px;
+    height: 80px;
+    stroke-width: 80px;
+  }
+  .secondline svg {
+    width: 550px;
+    height: 80px;
+    stroke-width: 80px;
+  }
+  .thirdline svg {
+    width: 700px;
+    height: 80px;
+    stroke-width: 80px;
+  }
+  .fourthline svg {
+    width: 850px;
+    height: 80px;
+    stroke-width: 80px;
+  }
 
   .topoval {
     position: relative;
@@ -657,24 +703,24 @@ h1 {
 @media (max-width: 1800px) and (min-width: 1600px) {
   .rightdown {
     bottom: 550px;
-    left: 50px;
+    left: 75px;
   }
 
   .leftdown {
     bottom: 625px;
-    left: 1475px;
+    left: 1550px;
     transform: rotate(90deg);
   }
 
   .rightup {
     top: 625px;
-    left: 50px;
+    left: 75px;
     transform: rotate(-90deg);
   }
 
   .leftup {
     top: 545px;
-    left: 1475px;
+    left: 1550px;
     transform: rotate(180deg);
   }
   .topoval {
@@ -693,26 +739,30 @@ h1 {
   .panel {
     font-size: 2.3vw;
   }
+  .arrow svg {
+    width: 200px;
+    height: 230px;
+  }
   .rightdown {
-    bottom: 550px;
-    left: 00px;
+    bottom: 500px;
+    left: -25px;
   }
 
   .leftdown {
-    bottom: 625px;
-    left: 1375px;
+    bottom: 575px;
+    left: 1250px;
     transform: rotate(90deg);
   }
 
   .rightup {
-    top: 625px;
-    left: 0px;
+    top: 575px;
+    left: -25px;
     transform: rotate(-90deg);
   }
 
   .leftup {
-    top: 545px;
-    left: 1375px;
+    top: 500px;
+    left: 1250px;
     transform: rotate(180deg);
   }
   .line-container {
@@ -743,24 +793,24 @@ h1 {
     height: 180px;
   }
   .rightdown {
-    bottom: 450px;
-    right: 150px;
+    bottom: 350px;
+    right: 50px;
   }
   .leftdown {
-    bottom: 525px;
-    left: 1000px;
+    bottom: 425px;
+    left: 910px;
     transform: rotate(90deg);
   }
 
   .rightup {
-    top: 525px;
-    right: 150px;
+    top: 425px;
+    right: 50px;
     transform: rotate(-90deg);
   }
 
   .leftup {
-    top: 445px;
-    left: 1000px;
+    top: 350px;
+    left: 900px;
     transform: rotate(180deg);
   }
   .line-container {
@@ -799,37 +849,45 @@ h1 {
     height: 130px;
   }
   .rightdown {
-    bottom: 350px;
-    right: 160px;
+    bottom: 150px;
+    right: 0px;
   }
   .leftdown {
-    bottom: 430px;
-    left: 825px;
+    bottom: 230px;
+    left: 625px;
     transform: rotate(90deg);
   }
 
   .rightup {
-    top: 425px;
-    right: 175px;
+    top: 235px;
+    right: 10px;
     transform: rotate(-90deg);
   }
 
   .leftup {
-    top: 345px;
-    left: 800px;
+    top: 150px;
+    left: 610px;
     transform: rotate(180deg);
   }
-  .firstline svg {
-    width: 50px;
-  }
-  .secondline svg {
+  .firstline {
     width: 100px;
+    height: 25px;
+    stroke-width: 25px;
   }
-  .thirdline svg {
-    width: 150px;
-  }
-  .fourthline svg {
+  .secondline {
     width: 200px;
+    height: 25px;
+    stroke-width: 30px;
+  }
+  .thirdline {
+    width: 250px;
+    height: 25px;
+    stroke-width: 30px;
+  }
+  .fourthline {
+    width: 300px;
+    height: 25px;
+    stroke-width: 30px;
   }
   .line-container {
     right: 190px;
@@ -873,25 +931,41 @@ h1 {
     height: 130px;
   }
   .rightdown {
-    bottom: 350px;
-    right: 300px;
+    bottom: 100px;
+    right: 25px;
   }
   .leftdown {
-    bottom: 430px;
-    left: 715px;
+    bottom: 180px;
+    left: 480px;
     transform: rotate(90deg);
   }
 
   .rightup {
-    top: 425px;
-    right: 325px;
+    top: 185px;
+    right: 35px;
     transform: rotate(-90deg);
   }
 
   .leftup {
-    top: 345px;
-    left: 700px;
+    top: 100px;
+    left: 460px;
     transform: rotate(180deg);
+  }
+  .firstline {
+    width: 50px;
+    height: 25px;
+  }
+  .secondline {
+    width: 100px;
+    height: 25px;
+  }
+  .thirdline {
+    width: 125px;
+    height: 25px;
+  }
+  .fourthline {
+    width: 150px;
+    height: 25px;
   }
   .topoval {
     position: relative;
@@ -925,28 +999,28 @@ h1 {
     padding-right: 50px;
   }
   .arrow svg {
-    width: 100px;
-    height: 130px;
+    width: 75px;
+    height: 100px;
   }
   .rightdown {
-    bottom: 350px;
-    right: 350px;
+    bottom: 20px;
+    right: 15px;
   }
   .leftdown {
-    bottom: 430px;
-    left: 665px;
+    bottom: 100px;
+    left: 320px;
     transform: rotate(90deg);
   }
 
   .rightup {
-    top: 425px;
-    right: 375px;
+    top: 105px;
+    right: 25px;
     transform: rotate(-90deg);
   }
 
   .leftup {
-    top: 345px;
-    left: 650px;
+    top: 20px;
+    left: 300px;
     transform: rotate(180deg);
   }
   .firstline svg {

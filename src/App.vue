@@ -5,6 +5,7 @@ import InterestPage from './components/InterestPage.vue'
 import JobPage from './components/JobPage.vue'
 import EducationPage from './components/EducationPage.vue'
 import ProjectPage from './components/ProjectPage.vue'
+import SkillsPage from './components/SkillsPage.vue'
 </script>
 
 <template>
@@ -15,22 +16,28 @@ import ProjectPage from './components/ProjectPage.vue'
     <div class="self-descripton-page">
       <SelfDescripton />
     </div>
-    <div class="interest-page">
-      <InterestPage />
+    <div class="education-page">
+      <EducationPage />
     </div>
     <div class="job-page">
       <JobPage />
     </div>
-    <div class="education-page">
-      <EducationPage />
-    </div>
     <div class="project-page">
       <ProjectPage />
+    </div>
+    <div class="interest-page">
+      <InterestPage />
+    </div>
+    <div class="skills-page">
+      <SkillsPage />
     </div>
   </main>
 </template>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 .major-mono-display-regular {
   font-family: 'Major Mono Display', monospace;
   font-weight: 400;

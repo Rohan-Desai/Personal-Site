@@ -344,30 +344,63 @@ audio {
   .right2 {
     top: 3vh;
   }
+  .heading-text {
+    font-size: 3vw;
+  }
+  .body-text {
+    font-size: 1.1vw;
+  }
 }
 @media (max-width: 1800px) and (min-width: 1600px) {
   .right2 {
     bottom: 2.5vh;
+  }
+  .heading-text {
+    font-size: 3vw;
+  }
+  .body-text {
+    font-size: 1.1vw;
   }
 }
 @media (max-width: 1600px) and (min-width: 1380px) {
   .right2 {
     top: 2vh;
   }
+  .heading-text {
+    font-size: 3vw;
+  }
+  .body-text {
+    font-size: 1.1vw;
+  }
 }
 @media (max-width: 1380px) and (min-width: 850px) {
-  .right2 {
-    top: 9.5vh;
+  .heading-text {
+    font-size: 4vw;
+  }
+  .body-text {
+    font-size: 1.4vw;
   }
 }
 @media (max-width: 850px) and (min-width: 500px) {
   .right2 {
-    top: 14vh;
+    top: 4vh;
+  }
+  .heading-text {
+    font-size: 4vw;
+  }
+  .body-text {
+    font-size: 1.5vw;
   }
 }
 @media (max-width: 500px) {
   .right2 {
-    top: 20vh;
+    top: 5vh;
+  }
+  .heading-text {
+    font-size: 5vw;
+  }
+  .body-text {
+    font-size: 2vw;
   }
 }
 </style>

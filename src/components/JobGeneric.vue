@@ -230,7 +230,7 @@ onMounted(() => {
   }
   .job-content {
     padding-left: 50px;
-    font-size: 0.6vw;
+    font-size: 0.9vw;
     top: 50px;
     color: white;
   }
@@ -327,7 +327,7 @@ onMounted(() => {
   }
   .job-content {
     padding-left: 50px;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     top: 20px;
     color: white;
   }
