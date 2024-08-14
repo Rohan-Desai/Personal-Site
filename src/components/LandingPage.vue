@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted } from 'vue'
-import { gsap } from 'gsap'
-import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
+import { onMounted } from '/vue'
+import { gsap } from '/gsap'
+import { MotionPathPlugin } from '/gsap/MotionPathPlugin'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 gsap.registerPlugin(MotionPathPlugin)
