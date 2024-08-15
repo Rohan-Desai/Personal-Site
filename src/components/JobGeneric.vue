@@ -226,12 +226,12 @@ onMounted(() => {
   }
   .company-name {
     font-size: 7vw;
-    top: 100px;
+    /* top: 100px; */
   }
   .job-content {
     padding-left: 50px;
     font-size: 0.9vw;
-    top: 50px;
+    /* top: 50px; */
     color: white;
   }
   .tags {
@@ -259,16 +259,16 @@ onMounted(() => {
   }
   .company-name {
     font-size: 7vw;
-    top: 100px;
+    /* top: 100px; */
   }
   .job-content {
     padding-left: 50px;
     font-size: 0.8vw;
-    top: 50px;
+    /* top: 50px; */
     color: white;
   }
   .tags {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
   .rotated-text {
@@ -291,12 +291,12 @@ onMounted(() => {
   }
   .company-name {
     font-size: 7vw;
-    top: 100px;
+    /* top: 100px; */
   }
   .job-content {
     padding-left: 50px;
-    font-size: 1.1vw;
-    top: 20px;
+    font-size: .8vw;
+    /* top: 20px; */
     color: white;
   }
   .tags {
@@ -319,16 +319,16 @@ onMounted(() => {
     margin-bottom: 10px;
   }
   .main-content {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .company-name {
     font-size: 7vw;
-    top: 100px;
+    /* top: 100px; */
   }
   .job-content {
     padding-left: 50px;
-    font-size: 1.2vw;
-    top: 20px;
+    font-size: .8vw;
+    /* top: 20px; */
     color: white;
   }
   .tags {
@@ -351,16 +351,16 @@ onMounted(() => {
     margin-bottom: 10px;
   }
   .main-content {
-    margin-top: 20px;
+    margin-top: 100px;
   }
   .company-name {
     font-size: 7vw;
-    top: 100px;
+    /* top: 100px; */
   }
   .job-content {
     padding-left: 20px;
-    font-size: 1.5vw;
-    top: 20px;
+    font-size:.8vw;
+    /* top: 20px; */
     color: white;
   }
   .tags {

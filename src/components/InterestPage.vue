@@ -355,7 +355,7 @@ audio {
 }
 @media (max-width: 1600px) and (min-width: 1380px) {
   .right2 {
-    top: 2vh;
+    bottom: 5vh;
   }
   .heading-text {
     font-size: 3vw;
@@ -371,10 +371,13 @@ audio {
   .body-text {
     font-size: 1.4vw;
   }
+  .right2 {
+    bottom: 10vh;
+  }
 }
 @media (max-width: 850px) and (min-width: 500px) {
   .right2 {
-    top: 4vh;
+    /* top: vh; */
   }
   .heading-text {
     font-size: 4vw;
@@ -385,7 +388,7 @@ audio {
 }
 @media (max-width: 500px) {
   .right2 {
-    top: 5vh;
+    top: 10vh;
   }
   .heading-text {
     font-size: 5vw;

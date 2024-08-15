@@ -43,7 +43,7 @@ const props = defineProps({
     padding: 12px 20px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1.4vw; /* Font size */
+    font-size: .9vw; /* Font size */
   }
 }
 @media (max-width: 1800px) and (min-width: 1600px) {
@@ -51,7 +51,7 @@ const props = defineProps({
     padding: 12px 20px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1vw; /* Font size */
+    font-size: .9vw; /* Font size */
   }
 }
 @media (max-width: 1600px) and (min-width: 1380px) {
@@ -59,7 +59,7 @@ const props = defineProps({
     padding: 10px 18px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1vw; /* Font size */
+    font-size: .9vw; /* Font size */
   }
 }
 @media (max-width: 1380px) and (min-width: 850px) {
@@ -67,7 +67,7 @@ const props = defineProps({
     padding: 8px 12px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1vw; /* Font size */
+    font-size: .9vw; /* Font size */
   }
 }
 @media (max-width: 850px) and (min-width: 500px) {

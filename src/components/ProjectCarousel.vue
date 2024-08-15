@@ -154,7 +154,7 @@ onBeforeUnmount(() => {
   font-size: 30px;
   color: white;
 }
-@media (min-width: 1800px) {
+/* @media (min-width: 1800px) {
   .carousel-item {
     min-width: 450px;
     height: 1000px;
@@ -172,9 +172,28 @@ onBeforeUnmount(() => {
     font-size: 50px;
     color: white;
   }
-}
+} */
 /* @media (max-width: 1800px) and (min-width: 1600px) {
 } */
+@media (max-width: 1600px) and (min-width: 1100px) {
+  .carousel-item {
+    min-width: 250px;
+    height: 500px;
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  .carousel-item h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-item p {
+    font-size: 0.7rem;
+  }
+  .icon {
+    font-size: 20px;
+    color: white;
+  }
+}
 @media (max-width: 1100px) and (min-width: 850px) {
   .carousel-item {
     min-width: 250px;
