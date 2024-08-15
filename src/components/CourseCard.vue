@@ -160,53 +160,6 @@ hr {
 @media (min-width: 1800px) {
   .card {
     padding: 16px;
-    width: 300px; /* Set fixed width */
-    height: 300px; /* Set fixed height */
-  }
-
-  .card h1 {
-    margin: 0 0 20px;
-    font-weight: 800;
-    font-size: 2.5em; /* Adjust font size */
-  }
-
-  .card p {
-    font-size: 1.5em; /* Adjust font size */
-  }
-
-  .modal-content h2 {
-    font-size: 3vw;
-  }
-
-  .modal-content h3 {
-    font-size: 1.5vw;
-  }
-
-  hr {
-    margin: 30px auto; /* Center horizontally */
-    width: 50%;
-    align-items: center;
-  }
-
-  .modal-content p {
-    margin: 0px 50px;
-    font-size: 1vw;
-  }
-
-  .tags {
-    margin: 30px;
-  }
-
-  .skill-button {
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 50px; /* Rounded corners */
-    font-size: 0.8vw; /* Font size */
-  }
-}
-@media (max-width: 1600px) and (min-width: 1380px) {
-  .card {
-    padding: 16px;
     width: 200px; /* Set fixed width */
     height: 200px; /* Set fixed height */
   }
@@ -249,55 +202,8 @@ hr {
     font-size: 0.8vw; /* Font size */
   }
 }
-@media (max-width: 1380px) and (min-width: 1100px) {
-  .container {
-    gap: 20px;
-  }
-  .card {
-    padding: 16px;
-    width: 175px; /* Set fixed width */
-    height: 175px; /* Set fixed height */
-  }
 
-  .card h1 {
-    margin: 0 0 7px;
-    font-weight: 800;
-    font-size: 1.2em; /* Adjust font size */
-  }
-
-  .card p {
-    font-size: 0.8em; /* Adjust font size */
-  }
-  .modal-content h2 {
-    font-size: 4vw;
-  }
-
-  .modal-content h3 {
-    font-size: 1.5vw;
-  }
-
-  hr {
-    margin: 20px auto; /* Center horizontally */
-    width: 50%;
-    align-items: center;
-  }
-
-  .modal-content p {
-    margin: 0px 50px;
-    font-size: 1.1vw;
-  }
-
-  .tags {
-    margin: 20px;
-  }
-
-  .skill-button {
-    padding: 6px 12px;
-    margin: 6px;
-    font-size: 0.8vw; /* Font size */
-  }
-}
-@media (max-width: 1100px) and (min-width: 900px) {
+@media (max-width: 1800px) and (min-width: 900px) {
   .container {
     gap: 15px;
   }

@@ -117,7 +117,7 @@ onMounted(() => {
 .page {
   height: 100vh;
   width: 100%;
-  padding: 50px;
+  padding: 25px;
 }
 #page1 {
   position: relative;
@@ -209,31 +209,7 @@ onMounted(() => {
 @media (min-width: 1800px) {
   .main-title,
   .main-title-course {
-    font-size: 6rem;
-  }
-  .title,
-  .major,
-  .minor {
-    font-size: 2.5rem;
-  }
-  .information {
-    font-size: 1.6rem;
-  }
-  .icon img {
-    margin-right: 1vw;
-    width: 200px;
-    height: 200px;
-  }
-  .icon svg {
-    margin-right: 1vw;
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (max-width: 1800px) and (min-width: 1600px) {
-  .main-title,
-  .main-title-course {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .title,
   .major,
@@ -247,24 +223,7 @@ onMounted(() => {
     margin-right: 2vw;
   }
 }
-@media (max-width: 1600px) and (min-width: 1380px) {
-  .main-title,
-  .main-title-course {
-    font-size: 4rem;
-  }
-  .title,
-  .major,
-  .minor {
-    font-size: 1.6rem;
-  }
-  .information {
-    font-size: 0.9rem;
-  }
-  .icon {
-    margin-right: 2vw;
-  }
-}
-@media (max-width: 1380px) and (min-width: 850px) {
+@media (max-width: 1600px) and (min-width: 850px) {
   .main-title,
   .main-title-course {
     font-size: 4rem;
