@@ -33,17 +33,17 @@ const props = defineProps({
 @media (min-width: 2400px) {
   .skill-button {
     padding: 12px 20px;
-    margin: 4px;
+    margin: 2px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1.2vw; /* Font size */
+    font-size: 1rem; /* Font size */
   }
 }
 @media (max-width: 2400px) and (min-width: 1800px) {
   .skill-button {
     padding: 12px 20px;
-    margin: 4px;
+    margin: 2px;
     border-radius: 50px; /* Rounded corners */
-    font-size: .9vw; /* Font size */
+    font-size: 1rem; /* Font size */
   }
 }
 @media (max-width: 1800px) and (min-width: 1600px) {
@@ -51,7 +51,7 @@ const props = defineProps({
     padding: 12px 20px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: .9vw; /* Font size */
+    font-size: .8vw; /* Font size */
   }
 }
 @media (max-width: 1600px) and (min-width: 1380px) {
@@ -59,7 +59,7 @@ const props = defineProps({
     padding: 10px 18px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: .9vw; /* Font size */
+    font-size: .7rem; /* Font size */
   }
 }
 @media (max-width: 1380px) and (min-width: 850px) {
@@ -67,7 +67,7 @@ const props = defineProps({
     padding: 8px 12px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: .9vw; /* Font size */
+    font-size: .6rem; /* Font size */
   }
 }
 @media (max-width: 850px) and (min-width: 500px) {
@@ -75,7 +75,7 @@ const props = defineProps({
     padding: 5px 10px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1.4vw; /* Font size */
+    font-size: .5rem; /* Font size */
   }
 }
 @media (max-width: 500px) {
@@ -83,7 +83,7 @@ const props = defineProps({
     padding: 3px 7px;
     margin: 4px;
     border-radius: 50px; /* Rounded corners */
-    font-size: 1.8vw; /* Font size */
+    font-size: .3rem; /* Font size */
   }
 }
 </style>

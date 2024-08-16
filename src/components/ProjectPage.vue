@@ -77,20 +77,6 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
     padding: 25px;
   }
   .title {
-    font-size: 2.5rem;
-  }
-  .side-description .header {
-    font-size: 2rem;
-  }
-  .side-description .description {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 1100px) and (min-width: 850px) {
-  .proj {
-    padding: 25px;
-  }
-  .title {
     font-size: 2rem;
     margin-bottom: 5vh;
   }

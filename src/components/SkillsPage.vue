@@ -195,7 +195,7 @@ onMounted(async () => {
 
 @media (min-width: 2400px) {
   .skills-page-title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .skills-section-title {
     font-size: 3rem;
@@ -208,10 +208,10 @@ onMounted(async () => {
 }
 @media (max-width: 2400px) and (min-width: 1800px) {
   .skills-page-title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .skills-section-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .skill-button {
     padding: 15px 15px;
@@ -220,6 +220,9 @@ onMounted(async () => {
   }
 }
 @media (max-width: 1800px) and (min-width: 1600px) {
+  .skills-page-title {
+    font-size: 2rem;
+  }
   .skill-button {
     padding: 10px 10px;
     margin: 5px;
@@ -227,6 +230,9 @@ onMounted(async () => {
   }
 }
 @media (max-width: 1600px) and (min-width: 1380px) {
+  .skills-page-title {
+    font-size: 2rem;
+  }
   .skill-button {
     padding: 10px 10px;
     margin: 4px;
