@@ -15,8 +15,10 @@ const containerRef = ref(null)
 const calculateMinX = () => {
   // const containerWidth = containerRef.value.offsetWidth
   const viewportWidth = window.innerWidth
-  if (viewportWidth > 1100) {
+  if (viewportWidth > 1500) {
     return -2500
+  }else if (viewportWidth > 1100) {
+    return -1900
   } else if (viewportWidth < 1100 && viewportWidth > 850) {
     return -1800
   } else if (viewportWidth < 850 && viewportWidth > 500) {
@@ -178,7 +180,7 @@ onBeforeUnmount(() => {
 @media (max-width: 1600px) and (min-width: 1100px) {
   .carousel-item {
     min-width: 250px;
-    height: 500px;
+    height: 450px;
     margin: 0 1rem;
     padding: 1rem;
   }

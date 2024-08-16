@@ -180,7 +180,7 @@ onMounted(() => {
   position: relative;
   width: 1px;
   background-color: #fff;
-  height: 90%;
+  height: 80%;
   top: 0px;
 }
 
@@ -327,13 +327,13 @@ onMounted(() => {
   }
   .job-content {
     padding-left: 50px;
-    font-size: .8vw;
+    font-size: .7vw;
     /* top: 20px; */
     color: white;
   }
   .tags {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
   .rotated-text {
     margin-right: 3vw;
@@ -351,7 +351,7 @@ onMounted(() => {
     margin-bottom: 10px;
   }
   .main-content {
-    margin-top: 100px;
+    margin-top: 20px;
   }
   .company-name {
     font-size: 7vw;
@@ -359,7 +359,7 @@ onMounted(() => {
   }
   .job-content {
     padding-left: 20px;
-    font-size:.8vw;
+    font-size: .6vw;
     /* top: 20px; */
     color: white;
   }
