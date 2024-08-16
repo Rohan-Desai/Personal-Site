@@ -339,7 +339,7 @@ onMounted(() => {
     margin-right: 3vw;
   }
   .rotated-text span {
-    margin-left: 10vh;
+    margin-left: 15vh;
   }
 }
 @media (max-width: 1380px) and (min-width: 850px) {
@@ -371,7 +371,7 @@ onMounted(() => {
     margin-right: 3vw;
   }
   .rotated-text span {
-    margin-left: 9vh;
+    margin-left: 11vh;
   }
 }
 @media (max-width: 850px) and (min-width: 500px) {
