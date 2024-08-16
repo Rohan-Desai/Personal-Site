@@ -77,13 +77,13 @@ import ProjectCarousel from '/src/components/ProjectCarousel.vue'
     padding: 100px;
   }
   .title {
-    font-size: 5rem;
-  }
-  .side-description .header {
     font-size: 3rem;
   }
+  .side-description .header {
+    font-size: 2.5rem;
+  }
   .side-description .description {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .carousel-containers {
     position: relative;
