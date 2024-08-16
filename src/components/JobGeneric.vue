@@ -325,6 +325,13 @@ onMounted(() => {
     font-size: 7vw;
     /* top: 100px; */
   }
+  .G{
+    font-size: 6vw;
+  }
+  .Twenty-Four{
+    font-size: 6vw;
+
+  }
   .job-content {
     padding-left: 50px;
     font-size: .7vw;
@@ -339,7 +346,7 @@ onMounted(() => {
     margin-right: 3vw;
   }
   .rotated-text span {
-    margin-left: 15vh;
+    margin-left: 14vh;
   }
 }
 @media (max-width: 1380px) and (min-width: 850px) {

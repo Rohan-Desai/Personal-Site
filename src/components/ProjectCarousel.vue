@@ -16,13 +16,13 @@ const calculateMinX = () => {
   // const containerWidth = containerRef.value.offsetWidth
   const viewportWidth = window.innerWidth
   if (viewportWidth > 1500) {
-    return -2300
+    return -2100
   }else if (viewportWidth > 1100) {
-    return -1900
+    return -1600
   } else if (viewportWidth < 1100 && viewportWidth > 850) {
-    return -1800
-  } else if (viewportWidth < 850 && viewportWidth > 500) {
     return -1500
+  } else if (viewportWidth < 850 && viewportWidth > 500) {
+    return -1200
   } else if (viewportWidth < 500) {
     return -1650
   }
